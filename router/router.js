@@ -4,7 +4,7 @@ var router = express.Router();
 
 // 首页
 router.get('/', (req, res) => {
-  res.render('index.html');
+  res.render('index.html',{title:'我是首页'});
 })
 
 // 登录
