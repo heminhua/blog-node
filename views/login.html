@@ -18,8 +18,8 @@
     </div>
     <form id="login_form">
       <div class="form-group">
-        <label for="">邮箱</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Email" autofocus>
+        <label for="">用户名</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="name" autofocus>
       </div>
       <div class="form-group">
         <label for="">密码</label>
@@ -52,7 +52,6 @@
         data: formData,
         dataType: 'json',
         success: function (data) {
-        //  console.log(data);
         if(data.code==0) {
          alert(data.msg);
          location.href='/';

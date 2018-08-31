@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
 var Schema=mongoose.Schema;
-const uerSchema = new Schema({
-   name: {
+const topicSchema = new Schema({
+   module: {
      type:String,
      require:true
    } ,
-   password:{
+   title:{
      type:String,
      require:true
    },
-   email:{
+   main:{
      type:String,
      require:true
    },
@@ -26,11 +26,9 @@ const uerSchema = new Schema({
      type:String,
      default:''
    },
-   birthday:{
-    type:Number,
-   }
+   
   });
 
 // const kitty = new Cat({ name: 'Zildjian' });
 // kitty.save().then(() => console.log('meow'));
-module.exports=mongoose.model('User',uerSchema);
+module.exports=mongoose.model('Topic',topicSchema);

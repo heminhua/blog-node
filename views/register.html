@@ -52,14 +52,18 @@
         data: formData,
         dataType: 'json',
         success: function (data) {
+          console.log(data);
+          
         var code=data.code;
         if(code==0){
           alert(data.msg);
           location.href='/login';
+        }else if(code==2){
+          alert(data.msg);
         }else if(code==1){
           alert(data.msg);
-        }else{
-          alert(data.msg);
+        }else {
+          alert(data.msg)
         }
         }
       })
